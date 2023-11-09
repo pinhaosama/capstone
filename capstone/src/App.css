@@ -1,0 +1,63 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(184, 149, 98);
+}
+
+/* ------------ header component ------------ */
+
+#header {
+  display: flex;
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  padding: 5px;
+  background-color: rgb(121, 89, 47);
+}
+
+#logo {
+  height: auto;
+  margin-left: 2%;
+  transform-origin: center;
+  animation: logogol 2s linear infinite;
+}
+
+#menuList {
+  display: flex;
+  flex-direction: row;
+  gap: 80%;
+  justify-content: space-between;
+  margin-left: calc(50vw - 70px);
+  margin: auto;
+  list-style-type: none;
+}
+
+.menuItem {
+  color: white;
+  font-weight: bold;
+  filter: drop-shadow(3px 3px black);
+  scale: 120%;
+  transition: scale 1s;
+}
+
+.menuItem:hover {
+  filter: drop-shadow(5px 5px black);
+  transition: scale 1s;
+  scale: 180%;
+}
+
+/* ------------ header component ------------ */
+
+@keyframes logogol {
+  0%{rotate: 0deg};
+  16%{transform: rotateZ(360deg)};
+  33%{transform: rotateZ(0deg)};
+  48%{transform: rotateX(360deg)};
+  66%{transform: rotateX(0deg)};
+  81%{transform: rotateY(360deg)};
+  100%{transform: rotateY(0deg)};
+}
